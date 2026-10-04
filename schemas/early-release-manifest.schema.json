@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dosettijakelu early manifest draft; not an activated production protocol",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["Product", "Version", "Architecture", "Channel", "Sha256", "Schema", "PackageUrl"],
+  "properties": {
+    "Product": {"const": "Dosettijakelu"},
+    "Version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"},
+    "Architecture": {"enum": ["win-x64", "win-arm64"]},
+    "Channel": {"enum": ["test", "stable"]},
+    "Sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "Schema": {"const": 1},
+    "PackageUrl": {"type": "string", "pattern": "^https://github\\.com/PharmUtilities/Dosettijakelu-Updates/releases/download/[^/?#]+/[^/?#]+$"}
+  }
+}

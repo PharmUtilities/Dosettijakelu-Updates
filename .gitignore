@@ -1,0 +1,12 @@
+*.zip
+*.exe
+*.dll
+*.db*
+*.sqlite*
+*.pfx
+*.p12
+*.pem
+*.key
+*.pkcs8
+.env*
+.DS_Store
